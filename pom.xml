@@ -6,7 +6,7 @@
 
   <groupId>edu.smith.cs.csc212</groupId>
   <artifactId>P2</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,9 +60,6 @@
       <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.0.1</version>
-        <configuration>
-          <additionalOptions>-html5</additionalOptions>
-        </configuration>
         <executions>
           <execution>
             <id>generate-javadoc</id>
