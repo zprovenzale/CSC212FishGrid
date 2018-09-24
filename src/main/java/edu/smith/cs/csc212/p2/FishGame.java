@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * This class manages our model of gameplay: missing and found fish, etc.
+ * @author jfoley
+ *
+ */
 public class FishGame {
 	/**
 	 * This is the world in which the fish are missing. (It's mostly a List!).

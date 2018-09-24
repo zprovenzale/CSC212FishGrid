@@ -132,7 +132,7 @@ public class World {
 	
 	/**
 	 * Insert an item randomly into the grid.
-	 * @param item
+	 * @param item - the rock, fish, snail or other WorldObject.
 	 */
 	public void insertRandomly(WorldObject item) {
 		item.setPosition(pickUnusedSpace());

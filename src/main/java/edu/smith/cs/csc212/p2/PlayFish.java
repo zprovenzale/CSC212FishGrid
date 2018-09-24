@@ -19,13 +19,11 @@ public class PlayFish extends GFX {
 	/**
 	 * Game size (visual). Try changing this to 600.
 	 */
-	// TODO(lab) make this as big as makes sense for you.
-	public static int VISUAL_GRID_SIZE = 400;
+	public static int VISUAL_GRID_SIZE = 600;
 	/**
 	 * Game size (logical).
 	 */
-	// TODO(lab) make this bigger when you add fish colors.
-	public static int LOGICAL_GRID_SIZE = 10;
+	public static int LOGICAL_GRID_SIZE = 20;
 	/**
 	 * The words appear in the top part of the screen.
 	 */

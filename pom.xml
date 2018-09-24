@@ -6,7 +6,7 @@
 
   <groupId>edu.smith.cs.csc212</groupId>
   <artifactId>P2</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -54,6 +54,14 @@
               <mainClass>edu.smith.cs.csc212.p2.PlayFish</mainClass>
             </manifest>
           </archive>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.0.1</version>
+        <configuration>
+          <additionalOptions>-html5</additionalOptions>
         </configuration>
       </plugin>
 
