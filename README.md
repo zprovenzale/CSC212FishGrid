@@ -69,7 +69,11 @@ There is a lot in the ``WorldObject`` class, we will be users of it, rather than
 ### Lab Challenge: Fish.fastScared (=4)
 No TODO for this (the challenge is to know where the edits belong).
 
-Lost fish may be ``fastScared`` (with some random probability). They will move faster, randomly if ``fastScared``. Some percentage of Fish just hang out without moving much.
+Right now, lost fish move 3 out of every 10 turns (because ``rand.nextDouble`` chooses a number from 0 to 1). This section proposes making two types of fish that have two different probabilities.
+
+- Lost fish may be ``fastScared`` (with some random probability). 
+- They will move more often randomly if ``fastScared`` (p=0.8)? 
+- Some percentage of Fish just hang out without moving as much (p=0.3).
 
 ### Lab Challenge: FallingRock (=4)
 No TODO for this either (the challenge is to know where the edits belong).
