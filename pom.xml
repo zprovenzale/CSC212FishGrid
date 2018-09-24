@@ -6,7 +6,7 @@
 
   <groupId>edu.smith.cs.csc212</groupId>
   <artifactId>P2</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -63,6 +63,15 @@
         <configuration>
           <additionalOptions>-html5</additionalOptions>
         </configuration>
+        <executions>
+          <execution>
+            <id>generate-javadoc</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
       <!-- this is entirely to set the java version -->
@@ -87,6 +96,20 @@
             <configuration>
               <outputDirectory>${project.build.directory}/lib</outputDirectory>
             </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
+      <plugin>  <!-- Create sources jar -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>

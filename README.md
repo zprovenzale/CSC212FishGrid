@@ -1,5 +1,7 @@
 # P2: Finding Fish (Lists)
 
+[Online Javadoc](https://jitpack.io/com/github/jjfiv/CSC212P2/1.1/javadoc/)
+
 This assignment will be easier to debug (because it moves slower), less graphical, and more about ``List``s! The fish lives in a grid (2d space) but we mostly only use a ``List`` of objects to represent that.
 
 ![Image of Finding Fish Game](P2.png)
