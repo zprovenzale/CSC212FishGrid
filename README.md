@@ -116,3 +116,4 @@ There are no TODO comments in the code for challenges. Now you will have to use 
 - A ``Fish`` caught in a bubble will be stuck within the bubble.
 - A player can click to "pop" the bubble and free the fish.
 - A player that bumps into a fish in a bubble will also free them.
+- More Difficult (not included): Make bubbles merge with each other & pop when they hit rocks.
