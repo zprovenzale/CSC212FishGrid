@@ -27,7 +27,7 @@ public class Rock extends WorldObject {
 			new Color(72,60,50)
 	};
 	
-	// TODO(lab): introduce a member here that indexes the ROCK_COLORS array.
+	// TODO(lab): introduce a variable that is part of the class (one per Rock object) here that indexes the ROCK_COLORS array.
 	
 	/**
 	 * Construct a Rock in our world.
