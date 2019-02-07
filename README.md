@@ -11,7 +11,7 @@ The learning objectives of this assignment are twofold:
 1. Learn more Java! Read some bigger starter-code and ask questions!
 2. Practice using ``List``s! Almost every TODO I left is about a ``List``, although there are some about adding fields to classes.
 
-***Due Date***: September 27, 2018.
+***Due Date***: February 14, 2019.
 
 Remember that we will have P3 opening on that day, so don't save it until the last minute!
 
@@ -26,7 +26,17 @@ We're going to work through a bunch of them in Lab! And some of them are left fo
 
 # Rubric
 
-## Program Compiles (=30)
+### Rubric and Reflection (=15)
+
+You must include a PDF file in your submission that identifies the grade you expect on this assignment based on what you completed. 
+
+In addition, you will write 10 statements of either:
+ - Accomplishments: things that you understand much better now.
+ - Challenges: things that you are still working on understanding.
+
+I will provide direct feedback to your writing.
+
+## Program Compiles (=15)
 This includes that your code should be professional. 
 - Try to proofread your work like an essay! 
 - Find all your ``println("stuff")`` statements and remove them, etc.
