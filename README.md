@@ -23,6 +23,7 @@ We're going to work through a bunch of them in Lab! And some of them are left fo
 - When you finish a TODO, delete it!
 - TODO(P2) are meant for after lab (once you have a better idea of how the game works).
 - In Eclipse, you can see all remaining TODOs by going to "Window > Show View > Tasks"!
+- Every solution is just a few lines of code (sometimes even one!) So don't stress out if you spend a lot of time thinking before writing anything (that's intentional).
 
 # Rubric
 
