@@ -47,7 +47,7 @@ This includes that your code should be professional.
 - Working with others or helping them debug is acceptable - use your best judgment! Make sure that you know what you're working on.
 - Have comments explaining tricky code!
 
-## Lab warm-up & code tour (=30).
+## Lab warm-up & code tour (=27..35).
 
 ### PlayFish class (=5)
  - You don't need to edit anything but the CONSTANTS in this class for this assignment at all. It's pretty smart already!
