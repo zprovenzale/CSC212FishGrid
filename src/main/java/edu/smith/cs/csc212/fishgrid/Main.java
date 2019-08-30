@@ -123,7 +123,8 @@ public class Main extends GFX {
 			// I fiddled with this translate to get pixel-perfect. Maybe there's a nicer way, but it works for now.
 
 			Graphics2D forWo = (Graphics2D) g.create();
-			forWo.translate((int) (wo.getX() * tw) + 1, (int) (wo.getY() * th) + 1);
+			forWo.translate((int) ((wo.getX() + 0.5) * tw) + 1, (int) ((wo.getY() + 0.5) * th) + 1);
+			forWo.scale(tw, th);
 			wo.draw(forWo);
 			forWo.dispose();
 		}
