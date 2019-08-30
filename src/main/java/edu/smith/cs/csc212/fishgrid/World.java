@@ -1,4 +1,4 @@
-package edu.smith.cs.csc212.p2;
+package edu.smith.cs.csc212.fishgrid;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package edu.smith.cs.csc212.p2;
+package edu.smith.cs.csc212.fishgrid;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

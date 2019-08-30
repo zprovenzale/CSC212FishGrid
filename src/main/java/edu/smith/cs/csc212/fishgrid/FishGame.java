@@ -1,4 +1,4 @@
-package edu.smith.cs.csc212.p2;
+package edu.smith.cs.csc212.fishgrid;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,7 +89,7 @@ public class FishGame {
 	}
 	
 	/**
-	 * This method is how the PlayFish app tells whether we're done.
+	 * This method is how the Main app tells whether we're done.
 	 * @return true if the player has won (or maybe lost?).
 	 */
 	public boolean gameOver() {

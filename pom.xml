@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.smith.cs.csc212</groupId>
-  <artifactId>P2</artifactId>
+  <artifactId>FishGrid</artifactId>
   <version>1.2-SNAPSHOT</version>
 
   <properties>
@@ -51,7 +51,7 @@
               <classpathPrefix>lib/</classpathPrefix>
               <addClasspath>true</addClasspath>
               <useUniqueVersions>false</useUniqueVersions>
-              <mainClass>edu.smith.cs.csc212.p2.PlayFish</mainClass>
+              <mainClass>edu.smith.cs.csc212.fishgrid.Main</mainClass>
             </manifest>
           </archive>
         </configuration>

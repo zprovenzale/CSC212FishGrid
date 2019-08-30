@@ -1,4 +1,4 @@
-package edu.smith.cs.csc212.p2;
+package edu.smith.cs.csc212.fishgrid;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -7,7 +7,7 @@ import java.awt.geom.Ellipse2D;
 
 /**
  * Most Fish behavior lives up in WorldObject (a Fish just looks special!).
- * Or it is in PlayFish, where the missing/found and player fish all act different!
+ * Or it is in Main, where the missing/found and player fish all act different!
  * 
  * @author jfoley
  */

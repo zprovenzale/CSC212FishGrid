@@ -1,4 +1,4 @@
-package edu.smith.cs.csc212.p2;
+package edu.smith.cs.csc212.fishgrid;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -15,7 +15,7 @@ import me.jjfoley.gfx.TextBox;
  * 
  * @author jfoley
  */
-public class PlayFish extends GFX {
+public class Main extends GFX {
 	/**
 	 * Game size (visual). TODO Try changing this to 600.
 	 */
@@ -48,7 +48,7 @@ public class PlayFish extends GFX {
 	/**
 	 * Construct a new fish game.
 	 */
-	public PlayFish() {
+	public Main() {
 		super(VISUAL_GRID_SIZE + BORDER * 2, VISUAL_GRID_SIZE + BORDER * 2 + TOP_PART);
 		game = new FishGame(LOGICAL_GRID_SIZE, LOGICAL_GRID_SIZE);
 		gameState.color = Color.WHITE;
@@ -123,8 +123,7 @@ public class PlayFish extends GFX {
 			// I fiddled with this translate to get pixel-perfect. Maybe there's a nicer way, but it works for now.
 
 			Graphics2D forWo = (Graphics2D) g.create();
-			forWo.translate((int) ((wo.getX() + 0.5) * tw) + 1, (int) ((wo.getY() + 0.5) * th) + 1);
-			forWo.scale(tw, th);
+			forWo.translate((int) (wo.getX() * tw) + 1, (int) (wo.getY() * th) + 1);
 			wo.draw(forWo);
 			forWo.dispose();
 		}
@@ -155,7 +154,7 @@ public class PlayFish extends GFX {
 	}
 
 	/**
-	 * We separate our "PlayFish" game logic update here.
+	 * We separate our "Main" game logic update here.
 	 * @param secondsSinceLastUpdate - my GFX code can tell us how long it is between each update, but we don't actually care here.
 	 */
 	@Override
@@ -212,7 +211,7 @@ public class PlayFish extends GFX {
 	 * @param args - not run from the command line so no args are used.
 	 */
 	public static void main(String[] args) {
-		PlayFish game = new PlayFish();
+		Main game = new Main();
 		game.start();
 	}
 
