@@ -11,17 +11,17 @@ import me.jjfoley.gfx.TextBox;
 
 /**
  * This is the graphical <b><i>view</i></b> of our "FishGame" class. Don't worry
- * about modifying this file for P2.
+ * about modifying this file at all for the assignment besides the very first lab-based comments.
  * 
  * @author jfoley
  */
 public class Main extends GFX {
 	/**
-	 * Game size (visual). TODO Try changing this to 600.
+	 * Game size (visual). TODO(lab) Try changing this to 600.
 	 */
 	public static int VISUAL_GRID_SIZE = 400;
 	/**
-	 * Game size (logical). TODO Try changing this to 15 or so.
+	 * Game size (logical). TODO(lab) Try changing this to 15 or so.
 	 */
 	public static int LOGICAL_GRID_SIZE = 10;
 	/**

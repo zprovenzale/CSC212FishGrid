@@ -93,7 +93,7 @@ public class FishGame {
 	 * @return true if the player has won (or maybe lost?).
 	 */
 	public boolean gameOver() {
-		// TODO(P2) We want to bring the fish home before we win!
+		// TODO(FishGrid) We want to bring the fish home before we win!
 		return missing.isEmpty();
 	}
 
@@ -152,10 +152,10 @@ public class FishGame {
 	 * @param y - the y-tile.
 	 */
 	public void click(int x, int y) {
-		// TODO(P2) use this print to debug your World.canSwim changes!
+		// TODO(FishGrid) use this print to debug your World.canSwim changes!
 		System.out.println("Clicked on: "+x+","+y+ " world.canSwim(player,...)="+world.canSwim(player, x, y));
 		List<WorldObject> atPoint = world.find(x, y);
-		// TODO(P2) allow the user to click and remove rocks.
+		// TODO(FishGrid) allow the user to click and remove rocks.
 
 	}
 	

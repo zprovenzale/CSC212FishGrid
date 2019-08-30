@@ -1,6 +1,6 @@
-# P2: Finding Fish (Lists)
+# FishGrid: Finding Fish (Lists)
 
-[Online Javadoc](https://jitpack.io/com/github/jjfiv/CSC212P2/1.2/javadoc/)
+[Online Javadoc](https://jitpack.io/com/github/jjfiv/CSC212FishGrid/1.3-SNAPSHOT/javadoc/)
 
 This assignment will be easier to debug (because it moves slower), less graphical, and more about ``List``s! The fish lives in a grid (2d space) but we mostly only use a ``List`` of objects to represent that.
 
@@ -13,15 +13,15 @@ The learning objectives of this assignment are twofold:
 
 ***Due Date***: February 14, 2019.
 
-Remember that we will have P3 opening on that day, so don't save it until the last minute!
+Remember that we will have the next assignment opening on that day, so don't save it until the last minute!
 
-## TODO(lab) and TODO(P2) Fixing!
+## TODO(lab) and TODO(FishGrid) Fixing!
 
 Eclipse highlights all the TODO comments that I left throughout the starter code as blue in the scroll-bar.
-We're going to work through a bunch of them in Lab! And some of them are left for later, when working on P2 directly.
+We're going to work through a bunch of them in Lab! And some of them are left for later, when working on this assignment directly.
 
 - When you finish a TODO, delete it!
-- TODO(P2) are meant for after lab (once you have a better idea of how the game works).
+- TODO(FishGrid) are meant for after lab (once you have a better idea of how the game works).
 - In Eclipse, you can see all remaining TODOs by going to "Window > Show View > Tasks"!
 - Every solution is just a few lines of code (sometimes even one!) So don't stress out if you spend a lot of time thinking before writing anything (that's intentional).
 
@@ -56,9 +56,9 @@ This includes that your code should be professional.
  - Don't change LOGICAL_GRID_SIZE to be too small! You won't be able to play.
 
 ### Fish class (=5)
-The ``Fish`` class for P2 is familiar, but much simpler! It lives on a grid called the ``World`` and doesn't move itself.
+The ``Fish`` class for this assignment is familiar, but much simpler! It lives on a grid called the ``World`` and doesn't move itself.
 - Add fish-colors. The ``COLORS`` static array has a list of a few colors. Create more.
-- Skip the TODO(P2) for now. We don't know where scoring happens, yet!
+- Skip the TODO(FishGrid) for now. We don't know where scoring happens, yet!
 - Understand how the color is selected by the drawing code into this array.
 - Play the game and see how many more fish appear. (Revisit ``LOGICAL_GRID_SIZE`` if too small).
 
@@ -100,7 +100,7 @@ Create a class ``FallingRock`` that extends ``Rock`` and overrides ``public void
 - ``System.out.println`` statements can help you debug this.
 
 ## Finishing the Game (=15)
-These are the rest of the TODO(P2); they are a bit harder than the TODO(lab) but you should have a better idea what code does what now.
+These are the rest of the TODO(FishGrid); they are a bit harder than the TODO(lab) but you should have a better idea what code does what now.
 
 - (Fish.java, FishGame.java) Have each fish worth some individual number of points (maybe based on color!).
 - (FishGame.java) Finish ``click(x,y)`` so that a user can click and remove rocks in case we generate a fish trapped in a cave!

@@ -39,8 +39,12 @@ public abstract class WorldObject {
 	 */
 	public static int NUM_RECENT_POSITIONS = 64;
 	/**
-	 * Here, we use a special kind of list that makes it easy to add to the front
-	 * and remove from the back, so we keep up to NUM_RECENT_POSITIONS locations for every fish.
+	 * Here, we use a list that makes it easy to both:
+	 *  - add to the front and
+	 *  - remove from the back.
+	 * Because we want keep up to NUM_RECENT_POSITIONS locations for every fish.
+	 *
+	 * https://docs.oracle.com/javase/7/docs/api/java/util/Deque.htmlP
 	 */
 	public Deque<IntPoint> recentPositions;
 
@@ -220,7 +224,7 @@ public abstract class WorldObject {
 	 * @return the x-coordinate.
 	 */
 	public int getX() {
-		return x;
+		return this.x;
 	}
 
 	/**
@@ -229,7 +233,12 @@ public abstract class WorldObject {
 	 * @return the y-coordinate.
 	 */
 	public int getY() {
-		return y;
+		return this.y;
+	}
+
+
+	public IntPoint getPosition() {
+		return new IntPoint(this.x, this.y);
 	}
 
 	/**
@@ -275,4 +284,5 @@ public abstract class WorldObject {
 	 * Abstract so that Fish and Rock, etc. MUST implement!
 	 */
 	public abstract void step();
+
 }

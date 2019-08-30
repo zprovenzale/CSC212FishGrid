@@ -15,12 +15,12 @@ public class Fish extends WorldObject {
 	/**
 	 * A fish is only special because of its color now!
 	 */
-	public static Color[] COLORS = {
+	static Color[] COLORS = {
 			Color.red,
 			Color.green,
 			Color.yellow
 			// TODO: (lab) Add more colors.
-			// TODO: (P2) Maybe make a special fish that is more points?
+			// TODO: (FishGrid) Maybe make a special fish that is more points?
 	};
 	/**
 	 * This is an index into the {@link #COLORS} array.

@@ -1,9 +1,6 @@
 package edu.smith.cs.csc212.fishgrid;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 import me.jjfoley.gfx.IntPoint;
@@ -116,18 +113,28 @@ public class World {
 	 * @return a point (x,y) that has nothing else in the grid.
 	 */
 	public IntPoint pickUnusedSpace() {
-		int tries = width * height;
-		for (int i=0; i<tries; i++) {
-			int x = rand.nextInt(width);
-			int y = rand.nextInt(height);
-			if (this.find(x, y).size() != 0) {
-				continue;
+		// Build a set of all available spaces:
+		Set<IntPoint> available = new HashSet<>();
+		for (int x=0; x<getWidth(); x++) {
+			for (int y=0; y<getHeight(); y++) {
+				available.add(new IntPoint(x, y));
 			}
-			return new IntPoint(x,y);
 		}
-		// If we get here, we tried a lot of times and couldn't find a random point.
+		// Remove any spaces that are in use:
+		for (WorldObject item : this.items) {
+			available.remove(item.getPosition());
+		}
+
+		// If we get here, we have too much stuff.
 		// Let's crash our Java program!
-		throw new IllegalStateException("Tried to pickUnusedSpace "+tries+" times and it failed! Maybe your grid is too small!");
+		if (available.size() == 0) {
+			throw new IllegalStateException("The world is too small! Trying to pick an unused space but there's nothing left.");
+		}
+
+		// Return an unused space at random: Need to copy to a list since sets do not have orders.
+		List<IntPoint> unused = new ArrayList<>(available);
+		int which = rand.nextInt(unused.size());
+		return unused.get(which);
 	}
 	
 	/**
@@ -197,7 +204,7 @@ public class World {
 		List<WorldObject> inSpot = this.find(x, y);
 		
 		for (WorldObject it : inSpot) {
-			// TODO(P2): Don't let us move over rocks as a Fish.
+			// TODO(FishGrid): Don't let us move over rocks as a Fish.
 			// The other fish shouldn't step "on" the player, the player should step on the other fish.
 			if (it instanceof Snail) {
 				// This if-statement doesn't let anyone step on the Snail.
@@ -226,13 +233,14 @@ public class World {
 	 * @param followers a set of objects to follow the leader.
 	 */
 	public static void objectsFollow(WorldObject target, List<? extends WorldObject> followers) {
-		// TODO(P2) Comment this method!
+		// TODO(FishGrid) Comment this method!
 		// What is recentPositions?
 		// What is followers?
 		// What is target?
 		// Why is past = putWhere[i+1]? Why not putWhere[i]?
 		List<IntPoint> putWhere = new ArrayList<>(target.recentPositions);
-		for (int i=0; i<followers.size(); i++) {
+		for (int i=0; i < followers.size() && i+1 < putWhere.size(); i++) {
+			// What is the deal with the two conditions in this for-loop?
 			IntPoint past = putWhere.get(i+1);
 			followers.get(i).setPosition(past.x, past.y);
 		}
