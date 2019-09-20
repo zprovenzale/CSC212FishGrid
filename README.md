@@ -10,8 +10,9 @@ The learning objectives of this assignment are twofold:
 
 1. Learn more Java! Read some bigger starter-code and ask questions!
 2. Practice using ``List``s! Almost every TODO I left is about a ``List``, although there are some about adding fields to classes.
+3. Learn about inheritance -- ``WorldObject`` does nearly all the work for ``Fish``, ``Snail`` and ``Rock``!
 
-***Due Date***: February 14, 2019.
+***Due Date***: September 27, 2019.
 
 Remember that we will have the next assignment opening on that day, so don't save it until the last minute!
 
@@ -29,7 +30,7 @@ We're going to work through a bunch of them in Lab! And some of them are left fo
 
 ### Rubric and Reflection (=15)
 
-You must fill out the following [Google Form]() to let me know your accomplishments on this project.
+You must fill out the following [Google Form](https://forms.gle/SMbYB9Q2XNBD1MmH6) to let me know your accomplishments on this project.
 I will provide direct feedback to your writing.
 
 When you submit, it tells you can immediately "Edit Your Response" -- copy and paste that link for later if you want to incrementally fill out the Rubric!
@@ -46,7 +47,7 @@ This includes that your code should be professional.
 
 ## Lab warm-up & code tour (=27..35).
 
-### Main class (=5)
+### Main class (=5) (Note, used to be called PlayFish)
  - You don't need to edit anything but the CONSTANTS in this class for this assignment at all. It's pretty smart already!
  - Play the game (WASD or arrow keys). The goal is to collect all the fish. (They just disappear when you get them now).
  - Change VISUAL_GRID_SIZE to be bigger so you can see details (but not so big it doesn't fit on your screen!).
