@@ -29,13 +29,10 @@ We're going to work through a bunch of them in Lab! And some of them are left fo
 
 ### Rubric and Reflection (=15)
 
-You must include a PDF file in your submission that identifies the grade you expect on this assignment based on what you completed. 
-
-In addition, you will write 10 statements of either:
- - Accomplishments: things that you understand much better now.
- - Challenges: things that you are still working on understanding.
-
+You must fill out the following [Google Form]() to let me know your accomplishments on this project.
 I will provide direct feedback to your writing.
+
+When you submit, it tells you can immediately "Edit Your Response" -- copy and paste that link for later if you want to incrementally fill out the Rubric!
 
 ## Program Compiles (=15)
 This includes that your code should be professional. 
@@ -49,7 +46,7 @@ This includes that your code should be professional.
 
 ## Lab warm-up & code tour (=27..35).
 
-### PlayFish class (=5)
+### Main class (=5)
  - You don't need to edit anything but the CONSTANTS in this class for this assignment at all. It's pretty smart already!
  - Play the game (WASD or arrow keys). The goal is to collect all the fish. (They just disappear when you get them now).
  - Change VISUAL_GRID_SIZE to be bigger so you can see details (but not so big it doesn't fit on your screen!).
@@ -74,13 +71,15 @@ There is a lot in the ``WorldObject`` class, we will be users of it, rather than
 
 ``FishGame`` tracks behavior of fish by which list they belong in. We could have had fish swim themselves, kind of like P0 (and have flags for lost, found, and eventually home) but we want to practice using ``List<Fish>`` and ``List<WorldObject>`` inside of ``FishGame``.
 
-- ***Wander Missing Fish*** - The ``FishGame`` class has a method called ``wanderMissingFish``. The for loop is almost done, but we want to call one fo the ``Fish`` movement methods on the fish in the loop. Fix my TODO and play the game again to make sure it works.
+- ***Wander Missing Fish*** - The ``FishGame`` class has a method called ``wanderMissingFish``. The for loop is almost done, but we want to call one of the ``Fish`` movement methods on the fish in the loop. Fix my TODO and play the game again to make sure it works.
 - ***Right now we only generate 5 rocks!*** - also, ``public static final int NUM_ROCKS``?
 - ***We want a ``Snail`` or two*** - there's a world method to insert a snail randomly; let'ls use it.
 - ***world.remove(wo)*** - Right now when we find fish we remove them from the world; this doesn't make sense. We want to delete that line and add a line that adds the fish to the list of "found" ``Fish``. We will have to cast our ``WorldObject`` to a ``Fish`` to do it. We are telling Java we know that it is a ``Fish``, so it is okay to use ``Fish`` methods. It will crash later if it was really a ``Rock`` and not a ``Fish``.
 
 ### Lab Challenge: Fish.fastScared (=4)
 No TODO for this (the challenge is to know where the edits belong).
+
+The goal here is to make some fish harder to catch than others!
 
 Right now, lost fish move 3 out of every 10 turns (because ``rand.nextDouble`` chooses a number from 0 to 1). This section proposes making two types of fish that have two different probabilities.
 
@@ -103,7 +102,7 @@ Create a class ``FallingRock`` that extends ``Rock`` and overrides ``public void
 These are the rest of the TODO(FishGrid); they are a bit harder than the TODO(lab) but you should have a better idea what code does what now.
 
 - (Fish.java, FishGame.java) Have each fish worth some individual number of points (maybe based on color!).
-- (FishGame.java) Finish ``click(x,y)`` so that a user can click and remove rocks in case we generate a fish trapped in a cave!
+- (FishGame.java) Finish ``click(x,y)`` so that a user can click and remove rocks in case we generate a fish trapped in a cave! Be sure that your click ONLY removes Rocks!.
 - (World.java) Right now, we only respect ``Snail`` space. ``Fish`` shouldn't step on each other (unless you're the player, collecting lost Fish) and Fish can't actually swim through rocks! (And vice-versa. Your falling-rocks shouldn't go through your fish.)
 
 # Optional Challenges
