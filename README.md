@@ -63,6 +63,8 @@ The ``Fish`` class for this assignment is familiar, but much simpler! It lives o
 ### Rock class (=5)
 Right now there are only a few rocks, but they're all the same color and are boring. I created an array of colors in the ``Rock`` class, but I forgot to hook it up. Let's assign rock colors randomly!
 
+HINT: All 3 TODO comments in this file indicate places you need to add code in order to make it work.
+
 ### WorldObject class Tour
 A ``Fish`` is-a ``WorldObject``. A lot more functionality is on this class. Every ``WorldObject`` knows how to ``moveUp``, ``moveDown``, ``moveLeft``, ``moveRight``, and ``moveRandomly``. They keep track of their recent positions in a special list called a ``Deque`` -- or double-ended queue ... there's not a whole lot to it except that it's easy to add and remove from both sides.
 
