@@ -126,7 +126,7 @@ There are no TODO comments in the code for challenges. Now you will have to use 
 - Create a ``Bubble`` class that extends ``WorldObject``.
 - Create a bubble state for ``Fish``. Right now the player sort of has a bubble drawn around them (you can use this drawing code).
 - When a ``Fish`` bumps into a ``Bubble``, the bubble is removed and the fish enters a "bubble" state.
-- A ``Fish`` caught in a bubble will be stuck within the bubble.
+- A ``Fish`` caught in a bubble will be stuck within the bubble and cannot move around.
 - A player can click to "pop" the bubble and free the fish.
 - A player that bumps into a fish in a bubble will also free them.
 - More Difficult (not included): Make bubbles merge with each other & pop when they hit rocks.
