@@ -268,6 +268,14 @@ public abstract class WorldObject {
 	public boolean inSameSpot(WorldObject other) {
 		return this.x == other.getX() && this.y == other.getY();
 	}
+	
+	/**
+	 * Explain to Java how to print a WorldObject.
+	 */
+	@Override
+	public String toString() {
+		return this.getClass().getSimpleName() + " @ (" + this.x + "," + this.y + ")";
+	}
 
 	/**
 	 * Draw this WorldObject!

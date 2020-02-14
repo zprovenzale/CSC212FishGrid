@@ -79,7 +79,7 @@ public class World {
 	 */
 	public void register(WorldObject item) {
 		// Print out what we've added, for our sanity.
-		System.out.println("register: "+item.getClass().getSimpleName());
+		System.out.println("register: "+item);
 		items.add(item);
 	}
 	
