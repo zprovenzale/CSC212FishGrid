@@ -98,8 +98,8 @@ Create a class ``FallingRock`` that extends ``Rock`` and overrides ``public void
 # Assignment Core (25)
 
 ## Explain the Fish Follow Logic (=10)
-- (World.java) Answer the questions in ``World.objectsFollow``.
-- ``System.out.println`` statements can help you debug this.
+- (World.java) Answer the questions in ``World.objectsFollow`` (Q1..Q5).
+- ``System.out.println`` statements can help you SEE what the values are.
 
 ## Finishing the Game (=15)
 These are the rest of the TODO(FishGrid); they are a bit harder than the TODO(lab) but you should have a better idea what code does what now.
