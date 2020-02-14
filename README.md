@@ -120,10 +120,10 @@ In this section, beware of deleting from a list while looping over it! ``addAll`
 - (FishGame.java) After 20 or so steps (you can change this) a fish that is too far back in the player's found team (more than 1 fish) has a chance of getting lost again every step (since they can't see you). This will encourage the player to visit the "home" more frequently.
 - (FishGame.java) Fish that wander home by accident should be marked accordingly as home!
 
-## Challenge 2: FishFood (=15)
-- At random intervals, food will appear somewhere on the board (if it doesn't exist).
-- The player will receive points for collecting the food.
-- The lost fish will eat the food if they bump into it (and the player gets no points).
+## Challenge 2: Hearts! (=15)
+- At random intervals, hearts will appear somewhere on the board.
+- The player will receive points for collecting the hearts.
+- The lost fish will collect any hearts they bump into (and the player gets no points).
 
 ## Challenge 3: Bubble Traps (=25+?)
 - Create a ``Bubble`` class that extends ``WorldObject``.
