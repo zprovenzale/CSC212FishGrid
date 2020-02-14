@@ -9,12 +9,12 @@ This assignment will be easier to debug (because it moves slower), less graphica
 The learning objectives of this assignment are twofold:
 
 1. Learn more Java! Read some bigger starter-code and ask questions!
-2. Practice using ``List``s! Almost every TODO I left is about a ``List``, although there are some about adding fields to classes.
+2. Practice using ``List<Fish>``s! Almost every TODO I left is about a ``List``, although there are some about adding fields to classes.
 3. Learn about inheritance -- ``WorldObject`` does nearly all the work for ``Fish``, ``Snail`` and ``Rock``!
 
-***Due Date***: September 27, 2019.
+***Due Date***: February 20, 2020.
 
-Remember that we will have the next assignment opening on that day, so don't save it until the last minute!
+Remember that we will have the next assignment opening the next day, so don't save it until the last minute!
 
 ## TODO(lab) and TODO(FishGrid) Fixing!
 
@@ -82,7 +82,7 @@ There is a lot in the ``WorldObject`` class, we will be users of it, rather than
 ### Lab Challenge: Fish.fastScared (=4)
 No TODO for this (the challenge is to know where the edits belong).
 
-The goal here is to make some fish harder to catch than others!
+The goal here is to make some fish harder to catch than others! *Since Fish can only move in whole steps, we can't just adjust the speed, but rather, we need to make the probability they take a step higher for some fish than for others.*
 
 Right now, lost fish move 3 out of every 10 turns (because ``rand.nextDouble`` chooses a number from 0 to 1). This section proposes making two types of fish that have two different probabilities.
 
@@ -113,6 +113,9 @@ These are the rest of the TODO(FishGrid); they are a bit harder than the TODO(la
 There are no TODO comments in the code for challenges. Now you will have to use what you've figured out about how the code works to find edits. Challenge 1 has files that are a hint, the other two challenges involve making new classes.
 
 ## Challenge 1: Making FishHome work (=20)
+
+In this section, beware of deleting from a list while looping over it! ``addAll`` and ``removeAll`` might be your best friends!
+
 - (FishGame.java) Right now, we win as soon as we find all the Fish. We want to bring them home, too. Whenever your player returns to the home, the fish that are in the found list should move to a new "home" list. Only when that list is full have we "won". You can ``world.remove(fish)`` that get home, so they're not all stacked on top of the house.
 - (FishGame.java) After 20 or so steps (you can change this) a fish that is too far back in the player's found team (more than 1 fish) has a chance of getting lost again every step (since they can't see you). This will encourage the player to visit the "home" more frequently.
 - (FishGame.java) Fish that wander home by accident should be marked accordingly as home!
@@ -122,7 +125,7 @@ There are no TODO comments in the code for challenges. Now you will have to use 
 - The player will receive points for collecting the food.
 - The lost fish will eat the food if they bump into it (and the player gets no points).
 
-## Challenge 3: Bubble Traps (=25)
+## Challenge 3: Bubble Traps (=25+?)
 - Create a ``Bubble`` class that extends ``WorldObject``.
 - Create a bubble state for ``Fish``. Right now the player sort of has a bubble drawn around them (you can use this drawing code).
 - When a ``Fish`` bumps into a ``Bubble``, the bubble is removed and the fish enters a "bubble" state.
@@ -130,3 +133,4 @@ There are no TODO comments in the code for challenges. Now you will have to use 
 - A player can click to "pop" the bubble and free the fish.
 - A player that bumps into a fish in a bubble will also free them.
 - More Difficult (not included): Make bubbles merge with each other & pop when they hit rocks.
+- More Difficult (not included): Player can get trapped in Bubble and must click to escape: requires modifying code in Main.java.
