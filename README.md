@@ -1,6 +1,6 @@
 # FishGrid: Finding Fish (Lists)
 
-[Online Javadoc](https://jitpack.io/com/github/jjfiv/CSC212FishGrid/1.3-SNAPSHOT/javadoc/)
+[Online Javadoc](https://jitpack.io/com/github/jjfiv/CSC212FishGrid/latest/javadoc/)
 
 This assignment will be easier to debug (because it moves slower), less graphical, and more about ``List``s! The fish lives in a grid (2d space) but we mostly only use a ``List`` of objects to represent that.
 
@@ -98,8 +98,8 @@ Create a class ``FallingRock`` that extends ``Rock`` and overrides ``public void
 # Assignment Core (25)
 
 ## Explain the Fish Follow Logic (=10)
-- (World.java) Answer the questions in ``World.objectsFollow``.
-- ``System.out.println`` statements can help you debug this.
+- (World.java) Answer the questions in ``World.objectsFollow`` (Q1..Q5).
+- ``System.out.println`` statements can help you SEE what the values are.
 
 ## Finishing the Game (=15)
 These are the rest of the TODO(FishGrid); they are a bit harder than the TODO(lab) but you should have a better idea what code does what now.
