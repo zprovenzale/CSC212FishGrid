@@ -76,7 +76,7 @@ public class FishGame {
 		for (int ft = 1; ft < Fish.COLORS.length; ft++) {
 			Fish friend = world.insertFishRandomly(ft);
 			missing.add(friend);
-		}
+		}		
 	}
 	
 	
