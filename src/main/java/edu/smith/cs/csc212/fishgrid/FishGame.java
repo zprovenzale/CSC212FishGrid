@@ -113,12 +113,15 @@ public class FishGame {
 		for (WorldObject wo : overlap) {
 			// It is missing if it's in our missing list.
 			if (missing.contains(wo)) {
-				// Remove this fish from the missing list.
-				missing.remove(wo);
+				if (!(wo instanceof Fish)) {
+					throw new AssertionError("wo must be a Fish since it was in missing!");
+				}
+				// Convince Java it's a Fish (we know it is!)
+				Fish justFound = (Fish) wo;
 				
 				// Remove from world.
 				// TODO(lab): add to found instead! (So we see objectsFollow work!)
-				world.remove(wo);
+				justFound.remove();
 				
 				// Increase score when you find a fish!
 				score += 10;
