@@ -234,13 +234,15 @@ public class World {
 	 */
 	public static void objectsFollow(WorldObject target, List<? extends WorldObject> followers) {
 		// TODO(FishGrid) Comment this method!
-		// What is recentPositions?
-		// What is followers?
-		// What is target?
-		// Why is past = putWhere[i+1]? Why not putWhere[i]?
+		// Q1. What is recentPositions?
+		// Q2. What is followers?
+		// Q3. What is target?
+		// Q4. Why is past = putWhere[i+1]? Why not putWhere[i]?
 		List<IntPoint> putWhere = new ArrayList<>(target.recentPositions);
 		for (int i=0; i < followers.size() && i+1 < putWhere.size(); i++) {
-			// What is the deal with the two conditions in this for-loop?
+			// Q5. What is the deal with the two conditions in this for-loop?
+			// Conditions are in the "while" part of this loop.
+			
 			IntPoint past = putWhere.get(i+1);
 			followers.get(i).setPosition(past.x, past.y);
 		}
