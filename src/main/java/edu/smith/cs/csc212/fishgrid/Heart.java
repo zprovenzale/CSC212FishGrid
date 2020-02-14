@@ -8,9 +8,9 @@ import java.awt.Graphics2D;
  * @author jfoley
  *
  */
-public class FishHeart extends WorldObject {
+public class Heart extends WorldObject {
 
-	public FishHeart(World world) {
+	public Heart(World world) {
 		super(world);
 	}
 
