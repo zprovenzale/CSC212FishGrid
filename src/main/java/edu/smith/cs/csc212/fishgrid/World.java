@@ -204,8 +204,12 @@ public class World {
 		List<WorldObject> inSpot = this.find(x, y);
 		
 		for (WorldObject it : inSpot) {
-			// TODO(FishGrid): Don't let us move over rocks as a Fish.
-			// The other fish shouldn't step "on" the player, the player should step on the other fish.
+			if (it instanceof Fish && isPlayer == false) {
+				return false;
+			}
+			if (it instanceof Rock) {
+				return false;
+			}
 			if (it instanceof Snail) {
 				// This if-statement doesn't let anyone step on the Snail.
 				// The Snail(s) are not gonna take it.
@@ -233,15 +237,21 @@ public class World {
 	 * @param followers a set of objects to follow the leader.
 	 */
 	public static void objectsFollow(WorldObject target, List<? extends WorldObject> followers) {
-		// TODO(FishGrid) Comment this method!
-		// Q1. What is recentPositions?
-		// Q2. What is followers?
-		// Q3. What is target?
-		// Q4. Why is past = putWhere[i+1]? Why not putWhere[i]?
+		// Q1. What is recentPositions? 
+		// A list of places an object used to be in order.
+		// Q2. What is followers? 
+		//The objects following an object
+		// Q3. What is target? 
+		//The lead object that recentPositions tracks
+		// Q4. Why is past = putWhere[i+1]? Why not putWhere[i]? 
+		//The object i is already at i, to go to the next place, 
+		//where the object in front of it is, is i+1.
 		List<IntPoint> putWhere = new ArrayList<>(target.recentPositions);
 		for (int i=0; i < followers.size() && i+1 < putWhere.size(); i++) {
 			// Q5. What is the deal with the two conditions in this for-loop?
 			// Conditions are in the "while" part of this loop.
+			//if there are more followers and places to put them, 
+			//put the next follower in that place. Otherwise, don't.
 			
 			IntPoint past = putWhere.get(i+1);
 			followers.get(i).setPosition(past.x, past.y);

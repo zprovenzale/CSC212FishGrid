@@ -18,14 +18,23 @@ public class Fish extends WorldObject {
 	static Color[] COLORS = {
 			Color.red,
 			Color.green,
-			Color.yellow
-			// TODO: (lab) Add more colors.
-			// TODO: (FishGrid) Maybe make a special fish that is more points?
+			Color.yellow,
+			Color.magenta,
+			Color.orange,
+			Color.pink,
+			Color.white,
+			Color.cyan,
+			Color.blue,
+			Color.black
 	};
 	/**
 	 * This is an index into the {@link #COLORS} array.
 	 */
 	int color;
+	/**
+	 * number of points the fish is worth
+	 */
+	int score;
 	/**
 	 * Whether or not this is the player;
 	 */
@@ -47,6 +56,7 @@ public class Fish extends WorldObject {
 	public Fish(int color, World world) {
 		super(world);
 		this.color = color;
+		this.score = color;
 	}
 	
 	/**
