@@ -65,6 +65,7 @@ public class FishGame {
 		
 		missing = new ArrayList<Fish>();
 		found = new ArrayList<Fish>();
+		backHome = new ArrayList<Fish>();
 		
 		// Add a home!
 		home = world.insertFishHome();
@@ -103,9 +104,11 @@ public class FishGame {
 	 * @return true if the player has won (or maybe lost?).
 	 */
 	public boolean gameOver() {
-		// TODO(FishGrid) We want to bring the fish home before we win!
-		//home.
-		return missing.isEmpty();
+		if(missing.size() == 0 && found.size()==0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -114,12 +117,30 @@ public class FishGame {
 	public void step() {
 		// Keep track of how long the game has run.
 		this.stepsTaken += 1;
+		if (this.stepsTaken > 20) {
+			leaveFish();
+		}
 				
 		// These are all the objects in the world in the same cell as the player.
 		List<WorldObject> overlap = this.player.findSameCell();
 		// The player is there, too, let's skip them.
 		overlap.remove(this.player);
 		
+		List<WorldObject> wanderHome = this.home.findSameCell();
+		wanderHome.remove(this.home);
+		
+		for (WorldObject wo : wanderHome) {
+			if (missing.contains(wo)) {
+				if (!(wo instanceof Fish)) {
+					throw new AssertionError("wo must be a Fish since it was in missing!");
+				}
+				Fish foundHome = (Fish) wo;
+				
+				backHome.add(foundHome);
+				missing.remove(foundHome);
+				foundHome.remove();
+			}		
+		}
 		// If we find a fish, remove it from missing.
 		for (WorldObject wo : overlap) {
 			// It is missing if it's in our missing list.
@@ -130,11 +151,18 @@ public class FishGame {
 				// Convince Java it's a Fish (we know it is!)
 				Fish justFound = (Fish) wo;
 				
-				// Remove from world.
+				// move to found list
 				found.add(justFound);
 				missing.remove(justFound);
+				//justFound.
 				// Increase score when you find a fish!
 				score += justFound.score;
+			} if(wo == home) {
+				backHome.addAll(found);
+				for (Fish afish: found) {
+					afish.remove();
+				}
+				found.clear();
 			}
 		}
 		
@@ -160,7 +188,16 @@ public class FishGame {
 			}
 		}
 	}
-
+	
+	public void leaveFish() {
+		if(found.size() > 1) {
+			Random rand = ThreadLocalRandom.current();
+			if (rand.nextDouble() <0.1) {
+				missing.add(found.get(found.size()-1));
+				found.remove(found.get(found.size()-1));
+			}
+		}
+	}
 	/**
 	 * This gets a click on the grid. We want it to destroy rocks that ruin the game.
 	 * @param x - the x-tile.
